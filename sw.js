@@ -4,21 +4,22 @@ const CACHE_NAME='v1_cache_BCH_PWA';
 //configuración de los ficheros a subir a la cache de la aplicación.
 var urlsToCache= [
     './',
-    './assets/main.css',
-    './assets/image/imagen-1.webp',
-    './assets/image/imagen-2.webp',
-    './assets/image/imagen-3.webp',
-    './assets/image/favicon-16.png',
-    './assets/image/favicon-32.png',
-    './assets/image/favicon-64.png',
-    './assets/image/favicon-96.png',
-    './assets/image/favicon-128.png',
-    './assets/image/favicon-192.png',
-    './assets/image/favicon-256.png',
-    './assets/image/favicon-384.png',
-    './assets/image/favicon-512.png',
-    './assets/image/favicon-1024.png',
+    './css/bootstrap.min.css',
+    './css/tooplate-infinite-loop.css',
+    './fontawesome-5.5/all.min.css',
 
+    './img/catrina.png',
+    './img/charro.gif',
+    './img/eterno.gif',
+    './img/huicho.gif',
+    './img/infinite-loop-03.jpg',
+    './img/logo-cybercharro.png',
+    './img/neo-puebla.jpeg',
+    './img/personajes-vertical.jpeg',
+    './img/personajes.jpg',
+    './img/robot.gif',
+    './img/soldado.gif',
+    './img/soul-stuidos.png',
 ];
 
 //Eventos del ServerWorker
