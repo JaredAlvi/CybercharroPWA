@@ -4,7 +4,7 @@
     "description": "Aplicacion del cybecharro",
     "background_color": "#FFF",
     "theme-color": "#FBDE33",
-    "orientation": "landscape",
+    "orientation": "portrait",
     "display": "standalone",
     "start_url": "./index.html?utm_source=web_app_manifest",
     "scope": "./",
