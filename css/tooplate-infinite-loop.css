@@ -75,16 +75,14 @@ blockquote {
 }
 
 .img-logo-header {
-  height: auto;
-  min-height: 30px;
-  max-height: 30px;
+  height: 60px;
 }
 .img-personaje {
   height: 250px;
 }
 
 .img-logo-inicio {
-  height: auto;
+  width: 400px;
 }
 
 
