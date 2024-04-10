@@ -75,7 +75,7 @@ blockquote {
 }
 
 .img-logo-header {
-  height: 60px;
+  max-height: 60px;
   min-height: 30px;
 }
 .img-personaje {
