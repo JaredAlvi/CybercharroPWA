@@ -154,44 +154,48 @@ https://www.tooplate.com/view/2117-infinite-loop
     </section>
     
     <section id="gallery" class="tm-section-pad-top">
-      <div class="container tm-container-gallery">
-        <div class="row">
-          <body>
-            <div class="container">
-              <div class="text-center col-12">
-                <h2 class="tm-text-primary tm-section-title mb-4">Estadísticas</h2>
-                <p class="mx-auto tm-section-desc">
-                  Conoce las estadísticas de nuestros jugadores actuales.
-                </p>
-              </div>
-              <!--
-              <table id="tabla-estadisticas" class="table">
-                <thead>
-                  <tr>
-                    <th>ID</th>
-                    <th>ID de Usuario</th>
-                    <th>Tiempo Jugado</th>
-                    <th>Puntuación Total</th>
-                    <th>Enemigos Eliminados</th>
-                    <th>Soldados Eliminados</th>
-                    <th>Robots Eliminados</th>
-                    <th>Jefes Eliminados</th>
-                    <th>Muertes Totales</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  Contenido de la tabla
-                </tbody>
-              </table>
-            -->
-            </div>
-            <script src="scripts.js"></script>
-          </body>         
+      <div class="container">
+        <h2 class="tm-text-primary tm-section-title mb-4">Estadísticas de Jugadores</h2>
+        <div class="table-responsive">
+          <table class="table">
+            <thead class="thead-dark">
+              <tr>
+                <th scope="col">Username</th>
+                <th scope="col">Tiempo Jugado</th>
+                <th scope="col">Enemigos Derrotados</th>
+                <th scope="col">Puntuación Total</th>
+              </tr>
+            </thead>
+            <tbody id="stats-table-body">
+              <!-- Los datos de la tabla se insertarán aquí mediante JavaScript -->
+            </tbody>
+          </table>
         </div>
-        <!-- Aqui va la tabla con la informacion de los jugadores -->
       </div>
     </section>
 
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+  fetch('https://cybercharroapi.onrender.com/api/estadisticas')
+    .then(response => response.json())
+    .then(data => {
+      const tableBody = document.getElementById('stats-table-body');
+      data.forEach(stat => {
+        const row = document.createElement('tr');
+        row.innerHTML = `
+          <td>${stat.USUARIO}</td>
+          <td>${stat.TIEMPO_JUGADO}</td>
+          <td>${stat.ENEMIGOS_ELIMINADOS}</td>
+          <td>${stat.PUNTUACION_TOTAL}</td>
+        `;
+        tableBody.appendChild(row);
+      });
+    })
+    .catch(error => console.error('Error al cargar las estadísticas:', error));
+});
+
+</script>
+    
     <!-- Contact Section -->
 <section id="contact" class="tm-section-pad-top tm-parallax-2">
   <div class="container tm-container-contact">
